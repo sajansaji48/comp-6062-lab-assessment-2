@@ -13,7 +13,7 @@
         <main>
             <div id="app">
             
-                <p >Current Pressure:{{pressureMonitorValue}}</p>
+                <p >Current Pressure:<strong>{{pressureMonitorValue}}</strong></p>
                 <div><input type="range" min="0" max="100" v-model="pressureMonitorValue"></div>
                 <div v-for="pressureLevel in pressureMonitorLevels" :key="pressureLevel.id" :class="['indicator', pressureLevel.color, 
                 { 'inactive': !isActive(pressureLevel) }]">{{ pressureLevel.label }}</div> 
